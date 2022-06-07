@@ -21,6 +21,7 @@ const IMAGE_HOST_DOMAINS = [
   "i.pravatar.cc",
   "images.unsplash.com",
   "lh3.googleusercontent.com",
+  "via.placeholder.com",
 ];
 
 const nextConfig = {
