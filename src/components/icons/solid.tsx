@@ -1,0 +1,18 @@
+export {
+  ChevronDownIcon,
+  HomeIcon,
+  ChevronLeftIcon,
+  LockClosedIcon,
+  ArrowRightIcon,
+  CameraIcon,
+  PhotographIcon,
+  LocationMarkerIcon,
+  ArrowNarrowRightIcon,
+  CheckCircleIcon,
+  UserIcon,
+  MusicNoteIcon,
+  PuzzleIcon,
+  ChevronRightIcon,
+  CakeIcon,
+  XIcon,
+} from "@heroicons/react/solid";

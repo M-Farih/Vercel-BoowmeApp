@@ -1,0 +1,271 @@
+/* Input phone */
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.flag-dropdown.open .selected-flag {
+  border-top-left-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+}
+.selected-flag:focus,
+.selected-flag:hover {
+  border-top-left-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+}
+.selected-flag {
+  width: 58px !important;
+  padding-left: 20px !important;
+}
+.country-name {
+  color: #6b6b6b !important;
+}
+.country-name {
+  color: #6b6b6b !important;
+}
+.react-tel-input .country-list .country:hover {
+  background-color: #fff !important;
+}
+
+.country-list .search-box {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.react-tel-input .country-list .search {
+  padding: 10px !important;
+}
+/* Input phone */
+
+.bg_steps {
+  position: fixed !important;
+}
+
+/* Date Picker */
+.react-datepicker__year-read-view--selected-year {
+  color: #fff;
+  font-size: 16px;
+}
+.react-datepicker__year-read-view--down-arrow {
+  margin-top: 4px;
+}
+.react-datepicker__navigation-icon {
+  margin-top: 22px;
+}
+.react-datepicker__portal {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  background-color: transparent !important;
+}
+.react-datepicker {
+  background-color: #efefef !important;
+  border-radius: 10px !important;
+}
+.react-datepicker__header {
+  background: #536fa6 !important;
+  border-radius: 10px !important;
+}
+
+.react-datepicker__current-month {
+  color: #fff !important;
+}
+.react-datepicker__day--selected {
+  background-color: #536fa6 !important;
+}
+.react-datepicker__day-name {
+  color: #fff !important;
+}
+.datepicker {
+  background-color: transparent !important;
+  border-radius: 50px !important;
+  border: 1px solid white !important;
+  text-align: center;
+}
+
+/* Date Picker */
+
+/* Autocomplete
+*/
+#react-select-2-input {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+.css-319lph-ValueContainer {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+.css-1s2u09g-control {
+  margin-top: 10px !important;
+  border-radius: 25px !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+div#react-select-2-placeholder {
+  color: white;
+}
+div#react-select-2-listbox {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff;
+}
+
+/*MultiRangeSlider*/
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: #f1f5f7;
+  border: 3px solid #e19abf;
+  border-radius: 50%;
+  /* box-shadow: 0 0 2px 2px #e19abf; */
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  border: 2px solid #e19abf;
+  /* box-shadow: 0 0 1px 1px #ced4da; */
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+/*MultiRangeSlider*/
+
+/*Accordion*/
+button[disabled].accordion {
+  border: none !important;
+  background: transparent !important;
+  color: rgba(156, 163, 175, var(--tw-text-opacity)) !important;
+  cursor: default !important;
+}
+/*Accordion*/
+
+/* .btn-noBorder:hover {
+  border: hidden;
+} */
+
+textarea {
+  resize: none !important;
+}
+
+.firebaseui-id-idp-button {
+  border-radius: 50px !important;
+}
+
+.textGradient {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popup {
+  z-index: 9999;
+}
+.sidebar {
+  z-index: 2000;
+}
+
+/* -------------- swip card --------------- */
+
+.swipe {
+  position: absolute;
+}
+
+#wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.panels {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+#a {
+  background: #eee;
+  position: fixed;
+  color: red;
+  top: 0;
+  z-index: 0;
+}
+#b {
+  background-color: #fff;
+  padding-top: 20px;
+  height: auto;
+}
+
+.bottom-popup {
+  z-index: 9999;
+}
+
+.info-btn {
+  bottom: 210px;
+}
+
+/*Primary botton*/
+.content::after {
+  content: attr(data);
+}
+.btn {
+  padding: 8px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  /* border-radius: 50px; */
+  background: linear-gradient(to right, #e19abf, #536fa6);
+  cursor: pointer;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0.1em;
+  right: 0.1em;
+  top: 0.1em;
+  bottom: 0.1em;
+  border-radius: 4px;
+  background-color: white;
+  z-index: -1;
+  transition: 200ms;
+  border-radius: 50px;
+}
+.btn-rounded::before {
+  border-radius: 10px;
+}
+.btn::after {
+  content: attr(data);
+  font-size: 16px;
+  background: linear-gradient(to left, #e19abf, #536fa6);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 200ms;
+}
+.btn:hover::before {
+  opacity: 50%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.btn:hover::after {
+  color: white;
+}
+/*Primary botton*/

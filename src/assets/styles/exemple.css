@@ -1,0 +1,73 @@
+.header_dropdown {
+  display: block;
+}
+
+.profile-icon {
+  position: absolute;
+  top: 12px;
+  width: 40px;
+  right: 10px;
+  height: 40px;
+  color: #8a8989;
+  z-index: 100;
+  font-size: 18px;
+}
+.with-border-white {
+  border: 1px solid #989898 !important;
+}
+/* .grayText {
+  color: #989898 !important;
+} */
+.with-border-white:checked {
+  border: 1px solid #e19abf !important;
+}
+/* Input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  height: 48px;
+}
+/* Input number */
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 0 20px !important;
+  width: 100% !important;
+}
+
+input[type="text"]::placeholder {
+  color: rgb(212, 207, 207);
+}
+.otpInput {
+  border: 1px solid #fff !important;
+}
+
+input[type="tel"] {
+  width: 100% !important;
+}
+
+input[type="number"]:focus {
+  color: white;
+}
+
+/* button:hover {
+  border: none;
+  background-image: linear-gradient(to right, #e19abf, #536fa6);
+} */
+
+/* input[type="number"].with-border {
+  border: 1px solid #a0b3d9 !important;
+} */
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}

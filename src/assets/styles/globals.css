@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  [type="checkbox"]:checked,
+  [type="radio"]:checked {
+    background-color: #e19abf;
+  }
+  [type="checkbox"]:focus,
+  [type="radio"]:focus {
+    outline: none !important;
+  }
+  button[disabled] {
+    border: 1px solid #999999;
+    background: #cccccc;
+    color: #666666;
+  }
+  button[disabled]:hover {
+    background: #cccccc;
+  }
+}

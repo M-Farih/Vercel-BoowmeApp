@@ -1,0 +1,10 @@
+{
+  "h1": "A simple example",
+  "change-locale": "Change locale",
+  "wall-link": "Wall",
+  "error-with-status": "A {{statusCode}} error occurred on server",
+  "error-without-status": "An error occurred on the server",
+  "back": "back to home",
+  "title": "Home | next-i18next",
+  "Choose_your_interests": "Choose your interests :"
+}
