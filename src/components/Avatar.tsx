@@ -61,7 +61,7 @@ export const Avatar: FC<AvatarProps> = ({
           </Col>
         </Popup>
         <Image
-          src={image}
+          src={image ? image : "http://via.placeholder.com/360x360"}
           width={200}
           height={200}
           layout="responsive"

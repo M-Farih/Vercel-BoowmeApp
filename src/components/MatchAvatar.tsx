@@ -26,7 +26,11 @@ export const MatchAvatar: FC<AvatarProps> = ({
       >
         <Image
           //@ts-ignore
-          src={AuthUser.photoURL}
+          src={
+            AuthUser.photoURL
+              ? AuthUser.photoURL
+              : "http://via.placeholder.com/360x360"
+          }
           width={200}
           height={200}
           loading="lazy"

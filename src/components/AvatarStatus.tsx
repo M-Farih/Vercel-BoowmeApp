@@ -13,7 +13,7 @@ export const AvatarStatus: FC<AvatarStatusProps> = ({
         <Avatar
           height={height}
           width={width}
-          image={src}
+          image={src ? src : "http://via.placeholder.com/360x360"}
           rounded="rounded-full"
         />
         <Text
