@@ -35,7 +35,7 @@ import { TagContainer } from "components/TagContainer";
 import React from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
-import Scroll from "react-scroll";
+// import Scroll from "react-scroll";
 import TinderCard from "react-tinder-card";
 import { RadioSelect } from "components";
 
@@ -43,7 +43,7 @@ const SwipePage: NextPage = () => {
   // const { t } = useTranslation(["swipe", "common"]);
   const [open, setOpen] = useState(false);
   let [openReportPopup, setOpenReportPopup] = useState(false);
-  const scroll = Scroll.animateScroll;
+  // const scroll = Scroll.animateScroll;
 
   /*character limitation */
   let limit = 50;
@@ -98,14 +98,14 @@ const SwipePage: NextPage = () => {
     setViewerIsOpen(false);
   };
 
-  const scrollToProfileDetails = () => {
-    scroll.scrollTo(window.innerHeight, {
-      duration: 500,
-      delay: 30,
-      smooth: "easeInOutCubic",
-    });
-  };
-  const scrollToTop = () => scroll.scrollToTop();
+  // const scrollToProfileDetails = () => {
+  //   scroll.scrollTo(window.innerHeight, {
+  //     duration: 500,
+  //     delay: 30,
+  //     smooth: "easeInOutCubic",
+  //   });
+  // };
+  // const scrollToTop = () => scroll.scrollToTop();
 
   const AuthUser = useAuthUser();
 
@@ -337,7 +337,9 @@ const SwipePage: NextPage = () => {
               >
                 {db[currentIndex].fname}
               </Text>
-              <View onClick={scrollToProfileDetails}>
+              <View
+              //onClick={scrollToProfileDetails}
+              >
                 <InfoIcon />
               </View>
             </Row>
@@ -418,7 +420,7 @@ const SwipePage: NextPage = () => {
               onSwipe={(dir) =>
                 swiped(
                   dir,
-                  character.fname, //@ts-ignore
+                  // character.fname,
                   index
                 )
               }
@@ -720,7 +722,7 @@ const SwipePage: NextPage = () => {
                       <Button
                         label="Send"
                         variant="primary"
-                        onClick={scrollToTop}
+                        // onClick={scrollToTop}
                       />
                     </View>
                   </Box>
