@@ -5,7 +5,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Image from "next/image";
 import {
-  ArrowNarrowRight,
   ReadingIcon,
   TravelIcon,
   CookingIcon,
