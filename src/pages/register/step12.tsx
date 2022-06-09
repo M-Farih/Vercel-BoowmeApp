@@ -113,9 +113,9 @@ const Step12: NextPage = () => {
       {/*Button*/}
       <View className="my-10 self-center">
         <Button
-          icon={<ArrowNarrowRight />}
+          label="Continue"
           variant="primary"
-          width="w-20"
+          width="w-40"
           onClick={handleClick}
         />
       </View>

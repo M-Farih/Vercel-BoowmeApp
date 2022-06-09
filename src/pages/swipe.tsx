@@ -710,7 +710,7 @@ const SwipePage: NextPage = () => {
                     <Input
                       full
                       as="textarea"
-                      maxlength="50"
+                      maxLength="50"
                       rows="4"
                       placeholder="Tap to impress ..."
                       inputClass="text-sm text-gray-600 rounded-md border-none"

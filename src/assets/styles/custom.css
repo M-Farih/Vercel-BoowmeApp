@@ -154,10 +154,6 @@ button[disabled].accordion {
 }
 /*Accordion*/
 
-/* .btn-noBorder:hover {
-  border: hidden;
-} */
-
 textarea {
   resize: none !important;
 }
@@ -166,11 +162,11 @@ textarea {
   border-radius: 50px !important;
 }
 
-.textGradient {
+/* .textGradient {
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .popup {
   z-index: 9999;
@@ -220,52 +216,22 @@ textarea {
   bottom: 210px;
 }
 
-/*Primary botton*/
-.content::after {
-  content: attr(data);
+/* Primary botton*/
+
+button.button {
+  border: solid 2px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(#536fa6, #e19abf);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
 }
-.btn {
-  padding: 8px;
-  border: none;
-  outline: none;
-  position: relative;
-  z-index: 1;
-  /* border-radius: 50px; */
-  background: linear-gradient(to right, #e19abf, #536fa6);
-  cursor: pointer;
-}
-.btn::before {
-  content: "";
-  position: absolute;
-  left: 0.1em;
-  right: 0.1em;
-  top: 0.1em;
-  bottom: 0.1em;
-  border-radius: 4px;
-  background-color: white;
-  z-index: -1;
-  transition: 200ms;
-  border-radius: 50px;
-}
-.btn-rounded::before {
-  border-radius: 10px;
-}
-.btn::after {
-  content: attr(data);
-  font-size: 16px;
-  background: linear-gradient(to left, #e19abf, #536fa6);
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: 200ms;
-}
-.btn:hover::before {
-  opacity: 50%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}
-.btn:hover::after {
+
+button.button:hover {
+  box-shadow: none;
   color: white;
 }
-/*Primary botton*/
+/*Primary botton */
