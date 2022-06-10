@@ -39,3 +39,4 @@ export * from "./ChatItem";
 export * from "./TagContainer";
 export * from "./MultiSelect";
 export * from "./RadioSelect";
+export * from "./RadioGroupB";

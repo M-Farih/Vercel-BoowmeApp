@@ -224,7 +224,7 @@ button.button {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(#536fa6, #e19abf);
+    linear-gradient(to left, #536fa6, #e19abf);
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fff inset;

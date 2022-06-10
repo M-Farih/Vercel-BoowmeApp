@@ -14,6 +14,7 @@ import {
   Row,
   Popup,
   Header,
+  RadioGroupB,
 } from "components";
 // import { useTranslation } from "hooks/translate";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -105,6 +106,18 @@ const ProfilSettingPage: NextPage = () => {
     { index: 2, educationLevel: "Baccalaureate" },
     { index: 3, educationLevel: "Self-learning" },
     { index: 4, educationLevel: "School of Life" },
+  ];
+
+  const RevealPicture = [
+    {
+      name: "Yes, always",
+    },
+    {
+      name: "When I like someone's profile",
+    },
+    {
+      name: "When I match with someone",
+    },
   ];
 
   /* */
@@ -277,7 +290,7 @@ const ProfilSettingPage: NextPage = () => {
                 Do you want to reveal your picture ?
               </Text>
               <Col className="pt-2 space-y-2 items-center">
-                <Button
+                {/* <Button
                   label="Yes, always"
                   variant="Tertiary"
                   width="w-64"
@@ -294,7 +307,8 @@ const ProfilSettingPage: NextPage = () => {
                   variant="primary"
                   width="w-64"
                   textSize="text-sm"
-                />
+                /> */}
+                <RadioGroupB dataProps={RevealPicture} selectedProps={0} />
               </Col>
             </Accordion>
             <Accordion
@@ -308,7 +322,7 @@ const ProfilSettingPage: NextPage = () => {
                 maxlength="50"
                 rows="4"
                 placeholder="Write small description about you ..."
-                inputClass="text-sm text-gray-600 rounded-md border-none"
+                inputClass="text-sm text-gray-600 rounded-md border-none focus:outline-none "
                 onChange={(event: { target: { value: any } }) =>
                   setFormattedContent(event.target.value)
                 }
