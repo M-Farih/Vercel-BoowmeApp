@@ -35,7 +35,7 @@ import { TagContainer } from "components/TagContainer";
 import React from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
-// import Scroll from "react-scroll";
+import Scroll from "react-scroll";
 import TinderCard from "react-tinder-card";
 import { RadioSelect } from "components";
 
@@ -43,7 +43,7 @@ const SwipePage: NextPage = () => {
   // const { t } = useTranslation(["swipe", "common"]);
   const [open, setOpen] = useState(false);
   let [openReportPopup, setOpenReportPopup] = useState(false);
-  // const scroll = Scroll.animateScroll;
+  const scroll = Scroll.animateScroll;
 
   /*character limitation */
   let limit = 50;
@@ -98,14 +98,14 @@ const SwipePage: NextPage = () => {
     setViewerIsOpen(false);
   };
 
-  // const scrollToProfileDetails = () => {
-  //   scroll.scrollTo(window.innerHeight, {
-  //     duration: 500,
-  //     delay: 30,
-  //     smooth: "easeInOutCubic",
-  //   });
-  // };
-  // const scrollToTop = () => scroll.scrollToTop();
+  const scrollToProfileDetails = () => {
+    scroll.scrollTo(window.innerHeight, {
+      duration: 500,
+      delay: 30,
+      smooth: "easeInOutCubic",
+    });
+  };
+  const scrollToTop = () => scroll.scrollToTop();
 
   const AuthUser = useAuthUser();
 
@@ -116,8 +116,8 @@ const SwipePage: NextPage = () => {
       url: "https://images.unsplash.com/photo-1615472096167-e2efc2f25dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d29tZW4lMjBoaWphYnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
       city: "tanger",
       country: "morocco",
-      height: "1m72",
-      age: "21ans",
+      height: "172 cm",
+      age: "21 years",
     },
     {
       fname: "Erlich",
@@ -125,8 +125,8 @@ const SwipePage: NextPage = () => {
       url: "https://images.unsplash.com/photo-1530797195762-6e542a0f1843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d29tZW4lMjBoaWphYnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
       city: "rabat",
       country: "morocco",
-      height: "1m65",
-      age: "28ans",
+      height: "165 cm",
+      age: "28 years",
     },
     {
       fname: "Monica",
@@ -135,7 +135,7 @@ const SwipePage: NextPage = () => {
       city: "casa",
       country: "morocco",
       height: "1m70",
-      age: "22ans",
+      age: "22 years",
     },
     {
       fname: "Jared Dunn",
@@ -143,8 +143,8 @@ const SwipePage: NextPage = () => {
       url: "https://images.unsplash.com/photo-1636302926027-9619142d7173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHdvbWVuJTIwaGlqYWJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
       city: "taza",
       country: "morocco",
-      height: "1m73",
-      age: "20ans",
+      height: "173 cm",
+      age: "20 years",
     },
     {
       fname: "Dinesh",
@@ -152,8 +152,8 @@ const SwipePage: NextPage = () => {
       url: "https://images.unsplash.com/photo-1629302404693-18d123b6c908?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHdvbWVuJTIwaGlqYWJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
       city: "fes",
       country: "morocco",
-      height: "1m59",
-      age: "25ans",
+      height: "159 cm",
+      age: "25 years",
     },
   ];
 
@@ -324,7 +324,7 @@ const SwipePage: NextPage = () => {
       />
 
       {/* info box */}
-      <View className="fixed bottom-32 z-20 w-11/12 left-4">
+      <View className="fixed bottom-32 z-20 w-full px-4">
         <Box variant="swipe">
           <Col className="space-y-2">
             <Row className="space-x-2">
@@ -337,9 +337,7 @@ const SwipePage: NextPage = () => {
               >
                 {db[currentIndex].fname}
               </Text>
-              <View
-              //onClick={scrollToProfileDetails}
-              >
+              <View onClick={scrollToProfileDetails}>
                 <InfoIcon />
               </View>
             </Row>
@@ -369,7 +367,6 @@ const SwipePage: NextPage = () => {
                   color="text-white"
                   fontWeight="font-light"
                   size="text-base"
-                  textTransform="capitalize"
                 >
                   {db[currentIndex].height}
                 </Text>
@@ -381,7 +378,6 @@ const SwipePage: NextPage = () => {
                   color="text-white"
                   fontWeight="font-light"
                   size="text-base"
-                  textTransform="capitalize"
                 >
                   {db[currentIndex].age}
                 </Text>
@@ -395,16 +391,18 @@ const SwipePage: NextPage = () => {
       {canSwipe && (
         <Row className="w-full grid place-items-center">
           <Row className="fixed z-50 bottom-20 justify-items-stretch self-center items-center justify-evenly w-3/4">
-            <div onClick={() => swipe("left")}>
+            <View onClick={() => swipe("left")}>
               <DislikeIcon />
-            </div>
-            <div onClick={() => goBack()}>
+            </View>
+            <View onClick={() => goBack()}>
               <UndoIcon />
-            </div>
-            <SkipeIcon />
-            <div onClick={() => swipe("right")}>
+            </View>
+            <View>
+              <SkipeIcon />
+            </View>
+            <View onClick={() => swipe("right")}>
               <LikeIconSwipe />
-            </div>
+            </View>
           </Row>
         </Row>
       )}
@@ -722,7 +720,7 @@ const SwipePage: NextPage = () => {
                       <Button
                         label="Send"
                         variant="primary"
-                        // onClick={scrollToTop}
+                        onClick={scrollToTop}
                       />
                     </View>
                   </Box>

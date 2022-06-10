@@ -8,9 +8,7 @@ const calculClass = ({ className, variant, full }: ButtonProps) => {
     //   variant === "primary",
     "px-10 z-20 button h-10 relative items-center justify-center inline-flex bg-c6 text-c2 text-ms font-light rounded-full bg-gradient-to-l hover:text-white hover:from-c2 hover:to-c4 shadow-md ":
       variant === "primary",
-    // "btn btn-rounded shadow-md pl-10 pr-10 h-10 rounded-xl":
-    //   variant === "primary-rounded",
-    "px-10 h-10 relative items-center justify-center inline-flex bg-c6 text-c4 text-md font-light rounded-full bg-gradient-to-l hover:text-white hover:from-c2 hover:to-c4 shadow-md":
+    "px-10 h-10 btn-primary btn-noBorder relative items-center justify-center inline-flex bg-c6 text-c2 text-ms font-light rounded-full bg-gradient-to-l hover:text-white hover:from-c2 hover:to-c4 shadow-md":
       variant === "secondary",
     "px-10 h-10 relative bg-c6 items-center justify-center inline-flex text-ms font-light rounded-xl border border-transparent hover:border-c5 hover:text-c4 shadow-md":
       variant === "Tertiary",

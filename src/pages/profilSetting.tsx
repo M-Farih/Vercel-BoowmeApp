@@ -194,7 +194,6 @@ const ProfilSettingPage: NextPage = () => {
       <Header variant="default" backLink />
       <Popup show={isOpen} onClose={() => setIsOpen(false)}>
         <Col className="self-center space-y-2">
-          {/* TODO: Change icon svg */}
           <Button
             icon={<CameraIcon iconPosition="left-5" />}
             label="Take a picture"
@@ -345,7 +344,7 @@ const ProfilSettingPage: NextPage = () => {
                   width="w-64"
                   textSize="text-sm"
                   icon={
-                    <ExternalLinkIcon className="h-5 w-5 absolute right-4" />
+                    <ExternalLinkIcon className="h-4 w-4 absolute right-4" />
                   }
                 />
                 <Button
@@ -354,7 +353,7 @@ const ProfilSettingPage: NextPage = () => {
                   textSize="text-sm"
                   width="w-64"
                   icon={
-                    <ExternalLinkIcon className="h-5 w-5 absolute right-4" />
+                    <ExternalLinkIcon className="h-4 w-4 absolute right-4" />
                   }
                 />
                 <Button
@@ -363,7 +362,7 @@ const ProfilSettingPage: NextPage = () => {
                   width="w-64"
                   textSize="text-sm"
                   icon={
-                    <ExternalLinkIcon className="h-5 w-5 absolute right-4" />
+                    <ExternalLinkIcon className="h-4 w-4 absolute right-4" />
                   }
                 />
               </Col>

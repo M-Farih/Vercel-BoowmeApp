@@ -46,7 +46,7 @@ const Step1: NextPage = () => {
         <Row className="space-x-5 justify-center">
           <Button
             label="Cancel"
-            variant="primary"
+            variant="secondary"
             width="w-28"
             onClick={() => setIsOpen(false)}
           />

@@ -30,7 +30,7 @@ import {
 import { TagContainer } from "components/TagContainer";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-// import Scroll from "react-scroll";
+import Scroll from "react-scroll";
 import React from "react";
 import { MultiSelect } from "components/MultiSelect";
 import { RadioSelect } from "components/RadioSelect";
@@ -44,7 +44,7 @@ const MyProfile: NextPage = () => {
   let [openPassionsPopup, setOpenPassionsPopup] = useState(false);
   let [openPicturesPopup, setOpenPicturesPopup] = useState(false);
 
-  // const scroll = Scroll.animateScroll;
+  const scroll = Scroll.animateScroll;
 
   const photos = [
     // {
@@ -100,11 +100,11 @@ const MyProfile: NextPage = () => {
   };
 
   const scrollToProfileDetails = () => {
-    // scroll.scrollTo(window.innerHeight, {
-    //   duration: 500,
-    //   delay: 30,
-    //   smooth: "easeInOutCubic",
-    // });
+    scroll.scrollTo(window.innerHeight, {
+      duration: 500,
+      delay: 30,
+      smooth: "easeInOutCubic",
+    });
   };
 
   const AuthUser = useAuthUser();
@@ -115,8 +115,8 @@ const MyProfile: NextPage = () => {
     url: "https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     city: "safi",
     country: "morocco",
-    height: "1m81",
-    age: "29ans",
+    height: "181 cm",
+    age: "29 years",
   };
 
   const qualitiesOption = [
@@ -590,7 +590,6 @@ const MyProfile: NextPage = () => {
                   color="text-white"
                   fontWeight="font-light"
                   size="text-base"
-                  textTransform="capitalize"
                 >
                   {profileDetails.height}
                 </Text>
@@ -602,7 +601,6 @@ const MyProfile: NextPage = () => {
                   color="text-white"
                   fontWeight="font-light"
                   size="text-base"
-                  textTransform="capitalize"
                 >
                   {profileDetails.age}
                 </Text>
