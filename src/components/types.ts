@@ -22,7 +22,6 @@ import type {
   UseFormReturn,
 } from "react-hook-form";
 import type { ExtendableProps } from "utils/types";
-import { number } from "yup";
 
 // Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts
 // A more precise version of just React.ComponentPropsWithoutRef on its own
