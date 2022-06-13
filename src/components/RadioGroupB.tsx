@@ -1,4 +1,8 @@
-import { FC, SVGProps, useState } from "react";
+import {
+  FC,
+  // SVGProps,
+  useState,
+} from "react";
 import { RadioGroup } from "@headlessui/react";
 import { RadioGroupBProps } from "components/types";
 
@@ -34,7 +38,7 @@ export const RadioGroupB: FC<RadioGroupBProps> = ({
               >
                 {({ checked }) => (
                   <>
-                    <div className="flex w-full items-center justify-between">
+                    <div className="flex w-full items-center justify-center">
                       <div className="flex items-center">
                         <div className="text-sm">
                           <RadioGroup.Label
@@ -59,11 +63,11 @@ export const RadioGroupB: FC<RadioGroupBProps> = ({
                           </RadioGroup.Description> */}
                         </div>
                       </div>
-                      {checked && (
+                      {/* {checked && (
                         <div className="shrink-0 text-white">
                           <CheckIcon className="h-6 w-6" />
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </>
                 )}
@@ -76,17 +80,17 @@ export const RadioGroupB: FC<RadioGroupBProps> = ({
   );
 };
 
-function CheckIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" {...props}>
-      <circle cx={12} cy={12} r={12} fill="#fff" opacity="0.2" />
-      <path
-        d="M7 13l3 3 7-7"
-        stroke="#fff"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+// function CheckIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+//   return (
+//     <svg viewBox="0 0 24 24" fill="none" {...props}>
+//       <circle cx={12} cy={12} r={12} fill="#fff" opacity="0.2" />
+//       <path
+//         d="M7 13l3 3 7-7"
+//         stroke="#fff"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+//     </svg>
+//   );
+// }

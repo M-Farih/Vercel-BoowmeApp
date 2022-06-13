@@ -35,7 +35,7 @@ export const RangeSlider: FC<MultiRangeSliderProps> = ({
       <View className="slider relative w-80">
         <View className="slider__track rounded-sm h-1 bg-gray-400 w-full z-10"></View>
         <View className="slider__left-value text-c4 text-md mt-3 text-center">
-          {minVal}
+          {minVal} cm
         </View>
       </View>
     </View>
