@@ -147,7 +147,7 @@ const WallPage: NextPage = () => {
         commit: "2d89f0c8",
         environment: "production",
         time: "4 days ago",
-        type: 3,
+        type: 2,
       },
       {
         id: 2,
@@ -167,6 +167,15 @@ const WallPage: NextPage = () => {
         commit: "2d89f0c8",
         environment: "production",
         time: "4 days ago",
+        type: 3,
+      },
+      {
+        id: 2,
+        person: people[1],
+        project: "Workcation",
+        commit: "2d89f0c8",
+        environment: "production",
+        time: "2 hours ago",
         type: 3,
       },
       {
@@ -353,7 +362,9 @@ const WallPage: NextPage = () => {
                                   as="h3"
                                   className="text-c1 text-md font-medium"
                                 >
-                                  {post.person.name} commented to your profile.
+                                  {post.person.name}{" "}
+                                  {post.type == 2 ? "Reacted" : "commented"} to
+                                  your profile.
                                 </Text>
                                 <View>
                                   <Avatar
