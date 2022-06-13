@@ -32,6 +32,7 @@ import { withAuthUser } from "utils/auth";
 import { useAuthUser } from "next-firebase-auth";
 import { ExternalLinkIcon, CreditCardIcon } from "@heroicons/react/outline";
 import { InformationCircleIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
 
 const ProfilSettingPage: NextPage = () => {
   // const { t } = useTranslation("common");
@@ -193,6 +194,10 @@ const ProfilSettingPage: NextPage = () => {
   );
   const AuthUser = useAuthUser();
 
+  const router = useRouter();
+  const answerRoute = () => {
+    router.push("/matchTest/answer");
+  };
   return (
     <Col className="bg-white">
       {/*Background image*/}
@@ -353,6 +358,7 @@ const ProfilSettingPage: NextPage = () => {
             >
               <Col className="space-y-2 items-center">
                 <Button
+                  onClick={answerRoute}
                   label="Match test"
                   variant="primary"
                   width="w-64"

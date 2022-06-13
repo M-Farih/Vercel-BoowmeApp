@@ -40,3 +40,4 @@ export * from "./TagContainer";
 export * from "./MultiSelect";
 export * from "./RadioSelect";
 export * from "./RadioGroupB";
+export * from "./AnswerMatch";

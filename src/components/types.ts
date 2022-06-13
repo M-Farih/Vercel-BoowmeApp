@@ -359,3 +359,6 @@ export interface AvatarStatusProps {
   width: string;
   height: string;
 }
+export interface AnswerMatchProps {
+  activityItem: any;
+}
