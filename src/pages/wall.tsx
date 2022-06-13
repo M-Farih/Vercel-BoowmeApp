@@ -360,7 +360,7 @@ const WallPage: NextPage = () => {
                               <Row className="flex justify-between">
                                 <Text
                                   as="h3"
-                                  className="text-c1 text-md font-medium"
+                                  className="text-c1 text-base font-medium"
                                 >
                                   {post.person.name}{" "}
                                   {post.type == 2 ? "Reacted" : "commented"} to
