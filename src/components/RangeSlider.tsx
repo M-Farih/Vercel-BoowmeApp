@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, useEffect, useState } from "react";
 import classnames from "classnames";
 import { MultiRangeSliderProps } from "components/types";
-import { View } from "./View";
+import { View } from "components/View";
 
 export const RangeSlider: FC<MultiRangeSliderProps> = ({
   min,

@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import type { TooltipProps } from "components/types";
-import { View } from "./View";
+import { View } from "components/View";
 
 export const Tooltip: FC<TooltipProps> = ({
   title,

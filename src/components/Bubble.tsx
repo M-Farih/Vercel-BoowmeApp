@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import { View } from "./View";
-import { Avatar } from "./Avatar";
+import { View, Avatar } from "components";
 
 export interface BubbleMessageProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -9,7 +8,7 @@ export interface BubbleMessageProps
 
 export const BubbleMessage: FC<BubbleMessageProps> = ({ children, sender }) => {
   return (
-    <View className="chat-message my-2 z-0">
+    <View className="my-2 z-0">
       {sender === "me" ? (
         <View className="flex items-end justify-end">
           <View className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">

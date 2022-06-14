@@ -1,5 +1,5 @@
 import { View, Col, Link, Row, AvatarStatus } from "components";
-import { DoubleCheckIcon } from "./icons";
+import { DoubleCheckIcon } from "components/icons";
 
 export const ChatItem = (post: any) => {
   return (

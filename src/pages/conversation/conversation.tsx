@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Col, ConversationHeader, Row, View, Image } from "components";
 // import { useTranslation } from "hooks/translate";
 import { BubbleMessage } from "components/Bubble";
@@ -16,7 +16,7 @@ import {
   BitmojiIcon,
 } from "components/icons";
 import { TagContainer } from "components/TagContainer";
-// import Scroll from "react-scroll";
+import Scroll from "react-scroll";
 
 const Conversation: NextPage = () => {
   // const { t } = useTranslation("common");
@@ -24,15 +24,15 @@ const Conversation: NextPage = () => {
   const [isTiping, setIsTiping] = useState(false);
   const [openExpandableButton, setOpenExpandableButton] = useState(false);
   const [textAreaRowCount, setTextAreaRowCount] = useState(1);
-  // const scroll = Scroll.animateScroll;
+  const scroll = Scroll.animateScroll;
 
-  // const scrollToBottom = () => {
-  //   scroll.scrollToBottom();
-  // };
+  const scrollToBottom = () => {
+    scroll.scrollToBottom();
+  };
 
-  // useEffect(() => {
-  //   scrollToBottom();
-  // });
+  useEffect(() => {
+    scrollToBottom();
+  });
 
   const calculTextCount = useCallback(
     (text: any) => {
@@ -167,7 +167,7 @@ const Conversation: NextPage = () => {
         className="bg_steps"
       />
       <Col className="overflow-scroll">
-        <Col className="px-4 py-20">
+        <Col className="px-4 py-20 flex flex-wrap content-end">
           {messages.map((msg, index) => {
             return (
               <BubbleMessage
@@ -201,7 +201,7 @@ const Conversation: NextPage = () => {
                 <View
                   onClick={() => {
                     addMessage();
-                    // scrollToBottom();
+                    scrollToBottom();
                   }}
                 >
                   <SendIcon />
