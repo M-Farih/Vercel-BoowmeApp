@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Col, Link, OTPBox, Text } from "components";
+import { Button, Col, Link, OTPBox, Popup, Text } from "components";
 import { VerifiedIcon } from "components/icons";
 // import { useTranslation } from "hooks/translate";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -18,8 +18,17 @@ const Step2: NextPage = () => {
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);
+
+  let [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
+      <Popup
+        show={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Failed to authenticate"
+        text="OTP code is invalid"
+      />
       {/*Background image*/}
       <Image
         src="/images/bg/bg8.webp"
@@ -78,7 +87,12 @@ const Step2: NextPage = () => {
           length={4}
           className="flex justify-center items-center flex-wrap"
           inputClassName="w-12 h-12 m-2 text-center text-white rounded-lg bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm placeholder-gray-300 border border-white"
-          onChangeOTP={(otp) => console.log("Number OTP: ", otp)}
+          onChangeOTP={(otp) => {
+            console.log("Number OTP: ", otp);
+            if (otp !== "0000" && otp.length == 4) {
+              setIsOpen(true);
+            }
+          }}
         />
         <Col className="space-y-3">
           <Button

@@ -5,9 +5,9 @@ import cn from "classnames";
 
 const calculClass = ({ selected, cursor }: TagProps) => {
   return cn({
-    "flex flex-col -z-1 justify-center border border-white items-center space-y-2 p-5 rounded-2xl bg-white bg-opacity-10 backdrop-filter backdrop-blur-xl w-40":
+    "flex flex-col -z-1 justify-center border border-white items-center space-y-2 p-5 rounded-2xl bg-white bg-opacity-10 backdrop-filter backdrop-blur-xl w-36":
       selected === false,
-    "flex flex-col justify-center items-center space-y-2 p-5 rounded-2xl bg-gradient-to-r from-c4 to-c2 w-40":
+    "flex flex-col justify-center items-center space-y-2 p-5 rounded-2xl bg-gradient-to-r from-c4 to-c2 w-36":
       selected === true,
     "cursor-pointer	": cursor,
   });

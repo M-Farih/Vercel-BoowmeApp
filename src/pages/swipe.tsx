@@ -389,6 +389,22 @@ const SwipePage: NextPage = () => {
 
       {/* btn swip */}
       {canSwipe && (
+        // <Row className="w-full grid place-items-center">
+        //   <Row className="fixed z-50 bottom-20 justify-items-stretch self-center items-center justify-evenly w-3/4">
+        //     <View onClick={() => swipe("left")}>
+        //       <DislikeIcon />
+        //     </View>
+        //     <View onClick={() => goBack()}>
+        //       <UndoIcon />
+        //     </View>
+        //     <View>
+        //       <SkipeIcon />
+        //     </View>
+        //     <View onClick={() => swipe("right")}>
+        //       <LikeIconSwipe />
+        //     </View>
+        //   </Row>
+        // </Row>
         <Row className="fixed z-50 bottom-20 items-center w-full justify-evenly px-14">
           <View onClick={() => swipe("left")}>
             <DislikeIcon />
@@ -406,7 +422,7 @@ const SwipePage: NextPage = () => {
       )}
 
       <View id="wrapper">
-        <View className="panels" id="a">
+        <View className="panels z-30" id="a">
           {db.map((character, index) => (
             <TinderCard
               ref={childRefs[index]}

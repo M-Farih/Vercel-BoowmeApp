@@ -1,12 +1,12 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
-import { Button, Col, Popup, View } from "components";
+import { Button, View } from "components";
 import { AvatarProps } from "components/types";
 import {
-  CameraIcon,
+  // CameraIcon,
   Pencil,
-  PictureIcon,
-  FacebookLightIcon,
+  // PictureIcon,
+  // FacebookLightIcon,
 } from "components/icons";
 
 export const Avatar: FC<AvatarProps> = ({
@@ -17,9 +17,10 @@ export const Avatar: FC<AvatarProps> = ({
   width,
   edit,
   onClick,
+  onEdit,
   bgBorder,
 }) => {
-  let [isOpen, setIsOpen] = useState(false);
+  // let [isOpen, setIsOpen] = useState(false);
   console.log(image + "hello");
 
   return (
@@ -31,7 +32,7 @@ export const Avatar: FC<AvatarProps> = ({
             : "border-2 border-white "
         }`}
       >
-        <Popup
+        {/* <Popup
           show={isOpen}
           onClose={() => setIsOpen(false)}
           title={"Modify your picture"}
@@ -59,7 +60,7 @@ export const Avatar: FC<AvatarProps> = ({
               alignSelf="self-center"
             />
           </Col>
-        </Popup>
+        </Popup> */}
         <Image
           src={image ? image : "http://via.placeholder.com/360x360"}
           width={200}
@@ -71,12 +72,13 @@ export const Avatar: FC<AvatarProps> = ({
             `is_avatar bg-white ${rounded}` +
             ` ${blured ? "filter blur-md" : ""}`
           }
+          onClick={onClick}
         />
       </View>
 
       {edit && (
         <View className="absolute right-0 bottom-0">
-          <Button icon={<Pencil />} variant="circle" onClick={onClick} />
+          <Button icon={<Pencil />} variant="circle" onClick={onEdit} />
         </View>
       )}
     </View>

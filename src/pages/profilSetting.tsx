@@ -246,7 +246,8 @@ const ProfilSettingPage: NextPage = () => {
             rounded="rounded-full"
             blured={false}
             // src={""}
-            onClick={() => setIsOpen(true)}
+            onEdit={() => setIsOpen(true)}
+            onClick={() => router.push("/myProfile")}
           />
         </View>
 
@@ -327,7 +328,7 @@ const ProfilSettingPage: NextPage = () => {
                 maxlength="50"
                 rows="4"
                 placeholder="Write small description about you ..."
-                inputClass="text-sm text-gray-600 rounded-md border-none focus:outline-none "
+                inputClass="text-sm text-gray-600 rounded-md border-none focus:outline-0"
                 onChange={(event: { target: { value: any } }) =>
                   setFormattedContent(event.target.value)
                 }

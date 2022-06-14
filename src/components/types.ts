@@ -221,6 +221,7 @@ export type AvatarProps = {
   bgBorder?: boolean;
   edit?: boolean;
   onClick?: MouseEventHandler | undefined;
+  onEdit?: MouseEventHandler | undefined;
 };
 
 export interface OTPInputProps {
@@ -278,6 +279,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   width?: String;
   height?: String;
   variant: "blur" | "grey" | "swipe" | "grey-with-border";
+  border?: boolean;
 }
 
 export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -359,6 +361,7 @@ export interface AvatarStatusProps {
   width: string;
   height: string;
 }
+
 export interface AnswerMatchProps {
   activityItem: any;
 }

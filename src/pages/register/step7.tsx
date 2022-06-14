@@ -34,7 +34,7 @@ const Step7: NextPage = () => {
             alignment="text-center"
             fontWeight="font-medium"
           >
-            When’s your birthday?
+            When's your birthday?
           </Text>
 
           {/* Date Picker */}

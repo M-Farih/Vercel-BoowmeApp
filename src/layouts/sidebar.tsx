@@ -6,16 +6,43 @@ import {
   CreditCardIcon,
 } from "@heroicons/react/outline";
 import { Support } from "components/icons";
-import { Avatar, Col, Row, Text, View } from "components";
-import React, { Fragment, FC } from "react";
+import { Avatar, Button, Col, Popup, Row, Text, View } from "components";
+import React, { Fragment, FC, useState } from "react";
 import { SideBarProps } from "components/types";
 import { useRouter } from "next/dist/client/router";
 import { CogIcon } from "@heroicons/react/solid";
-
+import { CameraIcon, FacebookLightIcon, PictureIcon } from "components/icons";
 export const Sidebar: FC<SideBarProps> = (props) => {
+  let [isOpen, setIsOpen] = useState(false);
+
   const router = useRouter();
   return (
     <>
+      <Popup show={isOpen} onClose={() => setIsOpen(false)}>
+        <Col className="self-center space-y-2">
+          <Button
+            icon={<CameraIcon iconPosition="left-5" />}
+            label="Take a picture"
+            variant="primary"
+            width="w-64"
+            alignSelf="self-center"
+          />
+          <Button
+            icon={<PictureIcon iconPosition="left-5" />}
+            label="Upload from gallery"
+            variant="primary"
+            width="w-64"
+            alignSelf="self-center"
+          />
+          <Button
+            icon={<FacebookLightIcon iconPosition="left-5" />}
+            label="Upload from Facebook"
+            variant="primary"
+            width="w-64"
+            alignSelf="self-center"
+          />
+        </Col>
+      </Popup>
       <Transition show={props.show} as={Fragment}>
         <Dialog
           as="div"
@@ -71,6 +98,8 @@ export const Sidebar: FC<SideBarProps> = (props) => {
                         rounded="rounded-full"
                         blured={false}
                         // src={""}
+                        onEdit={() => setIsOpen(true)}
+                        onClick={() => router.push("/myProfile")}
                       />
                     </View>
                     <View className="self-center mt-6">
