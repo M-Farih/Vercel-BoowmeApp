@@ -288,7 +288,7 @@ const WallPage: NextPage = () => {
                                   as="h3"
                                   fontWeight="font-bold"
                                   textTransform="capitalize"
-                                  size="text-sm"
+                                  size="text-base"
                                 >
                                   {post.person.name}
                                 </Text>
@@ -345,7 +345,7 @@ const WallPage: NextPage = () => {
                                   as="h3"
                                   fontWeight="font-bold"
                                   textTransform="capitalize"
-                                  size="text-sm"
+                                  size="text-base"
                                 >
                                   {post.person.name}
                                 </Text>
@@ -362,7 +362,7 @@ const WallPage: NextPage = () => {
                                   as="h3"
                                   className="text-c1 text-base font-medium"
                                 >
-                                  {post.person.name}{" "}
+                                  {post.person.name}
                                   {post.type == 2 ? "Reacted" : "commented"} to
                                   your profile.
                                 </Text>
@@ -409,6 +409,7 @@ export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
       layout: "main",
+      aPageProp: 1,
       ...(await serverSideTranslations(locale, ["common", "wall"])),
       // Will be passed to the page component as props
     },
